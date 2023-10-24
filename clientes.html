@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <!-- link external social redes -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <title>Clientes</title>
+</head>
+
+<body>
+  <!-- Barra% -->
+  <div class="container-fluid bg-dark barra-ng">
+    <div class="row">
+      <div class="col-6 border-end border-white p-0">
+        <p class="text-header text-end pe-1 text-white fw-bold fs-6">
+          35% DE DESCUENTO EN TU PRIMERA COMPRA
+        </p>
+      </div>
+      <div class="col-6">
+        <p class="text-header text-white fw-bold fs-6">COMPRA AHORA</p>
+      </div>
+    </div>
+  </div>
+  <!-- Endbarra% -->
+
+  <!-- Menu -->
+  <nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <div class="navbar-brand ms-5">
+      <a class="navbar-brand ms-2" href="index.html"><svg aria-hidden="true" focusable="false"
+          class="shared-nav-ps-logo" width="50px" height="50px" version="1.1" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" data-di-res-id="82e4f559-7b0faa29"
+          data-di-rand="1697845572437">
+          <g>
+            <g>
+              <path d="M5.8,32.1C4.3,33.1,4.8,35,8,35.9c3.3,1.1,6.9,1.4,10.4,0.8c0.2,0,0.4-0.1,0.5-0.1v-3.4l-3.4,1.1
+         c-1.3,0.4-2.6,0.5-3.9,0.2c-1-0.3-0.8-0.9,0.4-1.4l6.9-2.4V27l-9.6,3.3C8.1,30.7,6.9,31.3,5.8,32.1z M29,17.1v9.7
+         c4.1,2,7.3,0,7.3-5.2c0-5.3-1.9-7.7-7.4-9.6C26,11,23,10.1,20,9.5v28.9l7,2.1V16.2c0-1.1,0-1.9,0.8-1.6C28.9,14.9,29,16,29,17.1z
+          M42,29.8c-2.9-1-6-1.4-9-1.1c-1.6,0.1-3.1,0.5-4.5,1l-0.3,0.1v3.9l6.5-2.4c1.3-0.4,2.6-0.5,3.9-0.2c1,0.3,0.8,0.9-0.4,1.4
+         l-10,3.7V40L42,34.9c1-0.4,1.9-0.9,2.7-1.7C45.4,32.2,45.1,30.8,42,29.8z" fill="#0070d1"></path>
+            </g>
+          </g>
+        </svg></a>
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto me-5 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="shop.html" id="navbarDropdown1" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Comprar
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="shop.html">Juegos</a></li>
+            <li><a class="dropdown-item" href="#">Licencias</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="clientes.html">Clientes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="contact.html">Contactanos</a>
+        </li>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" />
+          <button class="btn btn-outline-success" type="submit">
+            Buscar
+          </button>
+        </form>
+      </ul>
+    </div>
+  </nav>
+  <!-- MenuEnd -->
+
+  <!-- MAIN -->
+  <div class="container mt-5">
+    <a class="btn btn-outline-success fw-bold" data-bs-toggle="modal" data-bs-target="#modal-addCliente">Agregar
+      Cliente</a>
+    <br>
+    <br>
+    <h2>Listado de Clientes</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Indicador</th>
+          <th>Número de Identificación</th>
+          <th>Nombres</th>
+          <th>Apellidos</th>
+          <th>Teléfono</th>
+          <th>Correo Electrónico</th>
+          <th>Fecha de Nacimiento</th>
+          <th>Nacionalidad</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="customerList">
+        <!-- Aquí debes agregar filas con datos de clientes -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ModalAddCliente -->
+  <div class="modal fade" id="modal-addCliente" tabindex="-1" aria-labelledby="modal-addCliente" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Agregar Cliente</h4>
+        </div>
+        <div class="modal-body">
+          <form id="agregarClienteform">
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre">
+            </div>
+            <div class="mb-3">
+              <label for="apellido" class="form-label">Apellidos</label>
+              <input type="text" class="form-control" id="apellido">
+            </div>
+            <div class="mb-3">
+              <label for="identificacion" class="form-label">Número de Identificación</label>
+              <input type="number" class="form-control" id="identificacion">
+            </div>
+            <div class="mb-3">
+              <label for="telefono" class="form-label">Telefono</label>
+              <input type="number" class="form-control" id="telefono">
+            </div>
+            <div class="mb-3">
+              <label for="correo" class="form-label">Correo Electrónico</label>
+              <input type="email" class="form-control" id="correo">
+            </div>
+            <div class="mb-3">
+              <label for="nacimiento" class="form-label">Fecha de Nacimiento</label>
+              <input type="date" class="form-control" id="nacimiento">
+            </div>
+            <div class="mb-3">
+              <label for="nacionalidad" class="form-label">Nacionalidad</label>
+              <input type="text" class="form-control" id="nacionalidad">
+            </div>
+          </form>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" id="addCustomerButton" type="submit">Agregar Cliente</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- EndMain -->
+  <!-- footer -->
+  <div class="container-fluid my-3">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-4 col-footer bg-dark text-center border border-white">
+        <a href="index.html" class="d-block mx-auto">
+          <svg aria-hidden="true" focusable="false" class="shared-nav-ps-logo" width="100px" height="100px"
+            version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 50 50" data-di-res-id="82e4f559-7b0faa29" data-di-rand="1697845572437">
+            <g>
+              <g>
+                <path d="M5.8,32.1C4.3,33.1,4.8,35,8,35.9c3.3,1.1,6.9,1.4,10.4,0.8c0.2,0,0.4-0.1,0.5-0.1v-3.4l-3.4,1.1
+               c-1.3,0.4-2.6,0.5-3.9,0.2c-1-0.3-0.8-0.9,0.4-1.4l6.9-2.4V27l-9.6,3.3C8.1,30.7,6.9,31.3,5.8,32.1z M29,17.1v9.7
+               c4.1,2,7.3,0,7.3-5.2c0-5.3-1.9-7.7-7.4-9.6C26,11,23,10.1,20,9.5v28.9l7,2.1V16.2c0-1.1,0-1.9,0.8-1.6C28.9,14.9,29,16,29,17.1z
+                M42,29.8c-2.9-1-6-1.4-9-1.1c-1.6,0.1-3.1,0.5-4.5,1l-0.3,0.1v3.9l6.5-2.4c1.3-0.4,2.6-0.5,3.9-0.2c1,0.3,0.8,0.9-0.4,1.4
+               l-10,3.7V40L42,34.9c1-0.4,1.9-0.9,2.7-1.7C45.4,32.2,45.1,30.8,42,29.8z" fill="#0070d1"></path>
+              </g>
+            </g>
+          </svg></a>
+      </div>
+      <div class="col-sm-12 col-md-4 col-footer bg-dark text-center border border-white">
+        <p class="text-white mt-1 fs-3">Siguenos</p>
+        <a href="https://twitter.com/PlayStation" target="_blank"
+          class=" fa fa-twitter my-3 fs-2 text-white text-decoration-none links"></a>
+        <a href="https://www.facebook.com/playstation/" target="_blank"
+          class="fa fa-facebook fs-2 text-white text-decoration-none links"></a>
+        <a href="https://www.instagram.com/PlayStation/" target="_blank"
+          class="fa fa-instagram fs-2 text-white text-decoration-none links"></a>
+      </div>
+      <div class="col-sm-12 col-md-4 col-footer bg-dark border border-white">
+        <p class="text-white text-center mt-1 fs-5">Ayuda</p>
+        <ul class="list-group">
+          <li class="list-group-item bg-transparent text-white border-0">
+            ENVIOS
+          </li>
+          <li class="list-group-item bg-transparent text-white border-0">
+            CAMBIO Y GARANTIA
+          </li>
+          <li class="list-group-item bg-transparent text-white border-0">
+            PREGUNTAS FRECUENTES
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 bg-white">
+        <p class="text-dark fw-bold text-center">© 2023 Sony Interactive Entertainment LLC</p>
+      </div>
+    </div>
+  </div>
+  <!-- endfooter -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+
+
+  <script src="js/agregarClientes.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+}
+.barra-ng {
+  height: 30px;
+}
+.img-slider {
+  max-height: 600px;
+}
+.img-producto {
+  max-height: 130px;
+}
+.card-barra {
+  max-height: 350px;
+}
+.img-barra {
+  max-height: 190px;
+}
+.img-barra-2 {
+  max-height: 170px;
+}
+.container-footer {
+  background-color: aqua;
+}
+.col-footer {
+  height: 200px;
+}
+.img-footer {
+  max-height: 180px;
+}
+.links {
+  width: 60px;
+  height: 60px;
+}
+
+
+
